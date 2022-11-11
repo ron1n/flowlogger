@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS CSV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="analyzer.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <header class="d-flex border-bottom">
+        <h1>VPC Flow Log Analyzer</h1>
+    </header>
+
+    <label class="form-label" for="CsvFile">Upload CSV File</label>
+    <input type="file" class="form-control" id="CsvFile" />
+
+    <label class="form-label" for="FieldSelection">Select Fields</label>
+    <select class="form-select" multiple size="8" aria-label="select fields" id="FieldSelection">
+    </select>
+    <div class="subnote">Multiple selections supported</div>
+    <button type="submit" class="btn btn-primary" id="LoadButton">Load</button>
+    <table class="table" id="DataTable">
+    </table>
+
+</div>
+<script src="analyzer.js"></script>
+</body>
+</html>
